@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+
+.complaint-upload-body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f9;
+  min-height: 100vh; /* Changed from height to min-height to allow scrolling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem; /* Added padding to prevent content from touching edges */
+  box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+}
+
+.complaint-upload-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px; /* Increased width to accommodate more fields */
+  width: 100%;
+  overflow: auto; /* Ensure container can scroll if content overflows */
+}
+
+.complaint-upload-header {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input, .form-group textarea {
+  width: 95%; /* Ensure inputs and textareas use full width of the container */
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+  
+}
+
+.complaint-upload-btn {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #2575fc;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.complaint-upload-btn:hover {
+  background-color: #0056b3;
+}
