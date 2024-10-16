@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}View Students{% endblock %}
+
+{% block content %}
+    <h1><center>All Details of Student Marks</center></h1>
+    <table class="tbl">
+        <tr class="tr1">
+            <th class="th1">Roll No</th>
+            <th class="th1">CGPA</th>
+            <th class="th1">Year</th>
+            <th class="th1">Internal Marks</th>
+            <th class="th1">External Marks</th>
+            <th class="th1">Email</th>
+        </tr>
+        {% for row in records %}
+        <tr class="tr1">
+            <td class="td1">{{ row[0] }}</td>
+            <td class="td1">{{ row[1] }}</td>
+            <td class="td1">{{ row[2] }}</td>
+            <td class="td1">{{ row[3] }}</td>
+            <td class="td1">{{ row[4] }}</td>
+            <td class="td1">{{ row[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    {% set email_list = records | map(attribute=5) | join(',') %}
+    <center><a href="{{ url_for('mail', emails=email_list) }}">Click to mail</a></center>
+
+{% endblock %}

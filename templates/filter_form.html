@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Filtered Students{% endblock %}
+
+{% block content %}
+   <div class="container">
+    <h2>Enter Details to Filter Students</h2>
+    <form action="{{ url_for('filter') }}" method="POST">
+        <label>Year:</label><br>
+        <input type="text" name="year"><br><br>
+        <label>CGPA:</label><br>
+        <input type="text" name="cgpa"><br><br>
+
+        <button type="submit" class="btn">Filter</button>
+    </form>
+    </div>
+{% endblock %}

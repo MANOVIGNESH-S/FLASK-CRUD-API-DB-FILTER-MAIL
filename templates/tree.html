@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Plant Disease Classification{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+    <h2>Plant Disease Classification</h2>
+    <form action="{{ url_for('tree') }}" method="post" enctype="multipart/form-data">
+        <label>Browse for Plant Image:</label><br><br>
+        <input type="file" name="image" accept="image/*"> <br><br>
+        <button type="submit" class="btn">Detect</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Student Management System{% endblock %}</title>
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='images/background5.jpg') }}");
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        header {
+            width: 100%;
+            color: black;
+            background: #00B4DB;
+            background: -webkit-linear-gradient(to left, #0083B0, #00B4DB);
+            background: linear-gradient(to left, #0083B0, #00B4DB);
+            text-align: center;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        header nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        header nav ul li {
+            margin-right: 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .container {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            width: 300px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .tbl {
+           width: 50%;
+            margin: 20px auto; /* Center align horizontally */
+            font-size: 18px;
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+        }
+        .th1, .td1 {
+            border: 1px;
+            text-align: center;
+            padding: 15px;
+            width: 1500px;
+        }
+        .th1 {
+            background-color: lightskyblue;
+        }
+        .tr1:nth-child(even) {
+            background-color: lightblue;
+        }
+        .tr1:nth-child(odd) {
+            background-color: lightcyan;
+        }
+
+        input[type="text"] {
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;"
+        }
+
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <h1>Student Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('update') }}">Home</a></li>
+                <li><a href="{{ url_for('yolo_page') }}">YOLO</a></li>
+                <li><a href="{{ url_for('insert') }}">About</a></li>
+                <li><a href="{{ url_for('insert') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div>
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>

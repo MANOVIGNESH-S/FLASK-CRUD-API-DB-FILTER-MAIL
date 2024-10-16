@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Student Deletion{% endblock %}
+
+{% block content %}
+    <div class="container">
+    <h2>Delete Student Data</h2>
+    <center action="{{ url_for('delete') }}" method="POST">
+        <label>Roll No:</label><br>
+        <center><input type="text" name="roll_no"></center><br>
+        <button type="submit" class="btn">Delete</button>
+    </form>
+    </div>
+{% endblock %}
